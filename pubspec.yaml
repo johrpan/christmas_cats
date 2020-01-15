@@ -1,0 +1,46 @@
+name: christmas_cats
+version: 0.1.0
+description: A little game about cats and christmas trees.
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+
+dependencies:
+  firebase_admob:
+  flame:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  shared_preferences:
+  sprintf:
+  vector_math:
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/background.png
+    - assets/images/cat1r.png
+    - assets/images/cat1s.png
+    - assets/images/cat2r.png
+    - assets/images/cat2s.png
+    - assets/images/cat3r.png
+    - assets/images/cat3s.png
+    - assets/images/cat4r.png
+    - assets/images/cat4s.png
+    - assets/images/cat5r.png
+    - assets/images/cat5s.png
+    - assets/images/cat6r.png
+    - assets/images/cat6s.png
+    - assets/images/cat7r.png
+    - assets/images/cat7s.png
+    - assets/images/tree1.png
+    - assets/images/tree2.png
+    - assets/images/tree3.png
+    - assets/images/tree4.png
+  fonts:
+    - family: Tangerine
+      fonts:
+        - asset: fonts/tangerine_regular.ttf
+        - asset: fonts/tangerine_bold.ttf
+          weight: 700
