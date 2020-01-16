@@ -1,4 +1,6 @@
-# Christmas Cats  
+![Banner](art/banner.png)
+
+# Christmas Cats
 
 A little game about cats and Christmas trees. This was a Christmas present for
 my fantastic girlfriend Kira.
