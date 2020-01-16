@@ -1,6 +1,6 @@
 name: christmas_cats
 version: 0.1.0
-description: A little game about cats and christmas trees.
+description: A little game about cats and Christmas trees.
 
 environment:
   sdk: ">=2.6.0 <3.0.0"

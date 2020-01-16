@@ -1,6 +1,6 @@
 # Christmas Cats  
 
-A little game about cats and christmas trees. This was a christmas present for
+A little game about cats and Christmas trees. This was a Christmas present for
 my fantastic girlfriend Kira.
 
 ## Hacking

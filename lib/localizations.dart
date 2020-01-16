@@ -17,11 +17,11 @@ class ChristmasCatsLocalizations {
       'intro': 'Introduction',
       'ad': 'Support me',
       'noAds': 'No ads available',
-      'poem': 'Cats are climbing christmas trees,\n'
+      'poem': 'Cats are climbing Christmas trees,\n'
           'The trees are getting wiggly,\n'
           'You\'ll get a lot of trouble,\n'
-          'If You don\'t tap them quickly.',
-      'intro1': 'Cats are climbing christmas trees,',
+          'If you don\'t tap them quickly.',
+      'intro1': 'Cats are climbing Christmas trees,',
       'intro2': 'The trees are getting wiggly,',
       'intro3': 'You\'ll get a lot of trouble,',
       'intro4': 'If You don\'t tap them quickly.',
