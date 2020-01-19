@@ -12,6 +12,7 @@ class Storage {
     try {
       return shPref?.getInt('highScore1') ?? 0;
     } on TypeError {
+      shPref.setInt('highScore1', 0);
       return 0;
     }
   }
@@ -20,6 +21,7 @@ class Storage {
     try {
       return shPref?.getInt('highScore2') ?? 0;
     } on TypeError {
+      shPref.setInt('highScore2', 0);
       return 0;
     }
   }
@@ -28,6 +30,7 @@ class Storage {
     try {
       return shPref?.getInt('highScore3') ?? 0;
     } on TypeError {
+      shPref.setInt('highScore3', 0);
       return 0;
     }
   }
@@ -39,7 +42,8 @@ class Storage {
       try {
         coins.add(shPref.getInt('coins') ?? 0);
       } on TypeError {
-        // Nothing to do
+        shPref.setInt('coins', 0);
+        // The stream already has a value of 0
       }
     }
   }
