@@ -15,16 +15,15 @@ class ChristmasCatsLocalizations {
       'records3': '3. %i',
       'back': 'Back',
       'intro': 'Introduction',
-      'ad': 'Support me',
+      'shop': 'Shop',
+      'coins': '%i Coins',
+      'getCoins': 'Get coins',
+      'adLoading': 'Ad loading',
       'noAds': 'No ads available',
       'poem': 'Cats are climbing Christmas trees,\n'
           'The trees are getting wiggly,\n'
           'You\'ll get a lot of trouble,\n'
           'If you don\'t tap them quickly.',
-      'intro1': 'Cats are climbing Christmas trees,',
-      'intro2': 'The trees are getting wiggly,',
-      'intro3': 'You\'ll get a lot of trouble,',
-      'intro4': 'If You don\'t tap them quickly.',
       'paused': 'Paused',
       'unpause': 'Continue',
       'exit': 'Exit',
@@ -42,16 +41,15 @@ class ChristmasCatsLocalizations {
       'records3': '3. %i',
       'back': 'Zurück',
       'intro': 'Einführung',
-      'ad': 'Mich unterstützen',
+      'shop': 'Laden',
+      'coins': '%i Münzen',
+      'adLoading': 'Werbung wird geladen',
       'noAds': 'Keine Werbung verfügbar',
+      'getCoins': 'Münzen bekommen',
       'poem': 'Katzen, die auf Tannen steigen,\n'
           'Welche sich gefährlich neigen,\n'
           'Du musst auf die Tannen tippen,\n'
           'Denn sonst werden diese kippen!',
-      'intro1': 'Katzen, die auf Tannen steigen,',
-      'intro2': 'Welche sich gefährlich neigen,',
-      'intro3': 'Du musst auf die Tannen tippen,',
-      'intro4': 'Denn sonst werden diese kippen!',
       'paused': 'Pausiert',
       'unpause': 'Weiter',
       'exit': 'Beenden',
@@ -77,13 +75,12 @@ class ChristmasCatsLocalizations {
   String get records3 => localizedStrings['records3'];
   String get back => localizedStrings['back'];
   String get intro => localizedStrings['intro'];
-  String get ad => localizedStrings['ad'];
+  String get shop => localizedStrings['shop'];
+  String get coins => localizedStrings['coins'];
+  String get adLoading => localizedStrings['adLoading'];
   String get noAds => localizedStrings['noAds'];
+  String get getCoins => localizedStrings['getCoins'];
   String get poem => localizedStrings['poem'];
-  String get intro1 => localizedStrings['intro1'];
-  String get intro2 => localizedStrings['intro2'];
-  String get intro3 => localizedStrings['intro3'];
-  String get intro4 => localizedStrings['intro4'];
   String get paused => localizedStrings['paused'];
   String get unpause => localizedStrings['unpause'];
   String get exit => localizedStrings['exit'];
