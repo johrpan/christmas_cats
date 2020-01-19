@@ -9,6 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 import 'components/cat.dart';
+import 'components/coin.dart';
 import 'components/tree.dart';
 import 'localizations.dart';
 
@@ -30,6 +31,7 @@ class Cell {
 
   Tree tree;
   Cat cat;
+  Coin coin;
 
   Cell(this.x, this.y);
 }
@@ -65,6 +67,7 @@ class ChristmasCats extends BaseGame with Tapable {
   bool gameOver = false;
 
   Timer nextCatTimer;
+  Timer coinTimer;
   Timer scoreTimer;
   List<Cell> cells;
   List<int> treeCells;
@@ -96,6 +99,12 @@ class ChristmasCats extends BaseGame with Tapable {
           marginTop + (cell.y + 0.2 + 0.6 * random.nextDouble()) * cellHeight;
       return Vector2(x, y);
     }
+  }
+
+  Vector2 getCoinPosition(Cell cell) {
+    final x = marginLRB + (cell.x + 0.5) * cellWidth;
+    final y = marginTop + (cell.y + 0.5) * cellHeight;
+    return Vector2(x, y);
   }
 
   void updateCat(int oldCellIndex, Cat cat) {
@@ -148,6 +157,26 @@ class ChristmasCats extends BaseGame with Tapable {
     nextCatTimer.start();
 
     nCats++;
+  }
+
+  void createCoin() {
+    coinTimer = Timer(60.0 + random.nextInt(60), callback: () {
+      final cellIndex = emptyCells.pick();
+      final cell = cells[cellIndex];
+      final coin = Coin(
+        getCoinPosition(cell),
+        Vector2(size.width / 2, -cellHeight),
+        () {
+          cell.coin = null;
+        },
+      );
+
+      add(coin);
+      cell.coin = coin;
+
+      createCoin();
+    });
+    coinTimer.start();
   }
 
   void reset() {
@@ -208,6 +237,7 @@ class ChristmasCats extends BaseGame with Tapable {
     }
 
     createCat();
+    createCoin();
 
     for (final tree in trees) {
       add(tree);
@@ -238,6 +268,7 @@ class ChristmasCats extends BaseGame with Tapable {
   void update(double t) {
     if (!paused) {
       nextCatTimer?.update(t);
+      coinTimer?.update(t);
       scoreTimer?.update(t);
 
       final List<Timer> oldTimers = [];
@@ -285,6 +316,11 @@ class ChristmasCats extends BaseGame with Tapable {
           }
 
           onScoreChanged(score);
+        } else if (cell?.coin != null) {
+          cell.coin.tap();
+          if (cell.cat == null) {
+            emptyCells.add(cellIndex);
+          }
         }
       }
     }
