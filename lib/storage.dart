@@ -1,8 +1,11 @@
+import 'package:rxdart/rxdart.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final storage = Storage();
 
 class Storage {
+  final coins = BehaviorSubject.seeded(0);
+
   SharedPreferences shPref;
 
   int get highScore1 {
@@ -30,7 +33,21 @@ class Storage {
   }
 
   Future<void> init() async {
-    shPref = await SharedPreferences.getInstance();
+    if (shPref == null) {
+      shPref = await SharedPreferences.getInstance();
+
+      try {
+        coins.add(shPref.getInt('coins') ?? 0);
+      } on TypeError {
+        // Nothing to do
+      }
+    }
+  }
+
+  Future<void> addCoins(int amount) async {
+    final newCoins = coins.value + amount;
+    coins.add(newCoins);
+    await shPref.setInt('coins', newCoins);
   }
 
   Future<void> addScore(int score) async {
