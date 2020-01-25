@@ -15,7 +15,6 @@ class ChristmasCatsLocalizations {
       'records3': '3. %i',
       'back': 'Back',
       'intro': 'Introduction',
-      'shop': 'Shop',
       'coins': '%i Coins',
       'getCoins': 'Get coins',
       'adLoading': 'Ad loading',
@@ -41,7 +40,6 @@ class ChristmasCatsLocalizations {
       'records3': '3. %i',
       'back': 'Zurück',
       'intro': 'Einführung',
-      'shop': 'Laden',
       'coins': '%i Münzen',
       'adLoading': 'Werbung wird geladen',
       'noAds': 'Keine Werbung verfügbar',
@@ -75,7 +73,6 @@ class ChristmasCatsLocalizations {
   String get records3 => localizedStrings['records3'];
   String get back => localizedStrings['back'];
   String get intro => localizedStrings['intro'];
-  String get shop => localizedStrings['shop'];
   String get coins => localizedStrings['coins'];
   String get adLoading => localizedStrings['adLoading'];
   String get noAds => localizedStrings['noAds'];

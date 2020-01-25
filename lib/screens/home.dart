@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../localizations.dart';
+import '../widgets/get_coins.dart';
 import '../widgets/menu.dart';
 import '../widgets/menu_entry.dart';
 
 import 'game.dart';
 import 'intro.dart';
 import 'records.dart';
-import 'shop.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -48,17 +48,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          Builder(
-            builder: (context) => MenuEntry(
-              text: localizations.shop,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ShopScreen(),
-                ),
-              ),
-            ),
-          ),
+          GetCoins(),
           MenuEntry(
             text: localizations.exit,
             onTap: () => SystemNavigator.pop(),
